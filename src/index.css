@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 300;
+    background-color: #06070B;
+    color: #F5F5F0;
+    overflow-x: hidden;
+    /* cursor: none; */
+  }
+
+  @media (pointer: coarse) {
+    body { cursor: auto; }
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  ::selection {
+    background: rgba(111, 232, 255, 0.25);
+    color: #F5F5F0;
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #06070B; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(111, 232, 255, 0.3);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(111, 232, 255, 0.6); }
+}
+
+@layer components {
+  .container-x {
+    @apply max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-16;
+  }
+
+  /* ===== Buttons — أنيقة ===== */
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4
+           text-[11px] font-medium tracking-[0.2em] uppercase
+           transition-all duration-700 relative overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply btn text-void bg-ink
+           hover:bg-neon-cyan
+           shadow-[0_0_0_0_rgba(111,232,255,0)]
+           hover:shadow-[0_0_40px_rgba(111,232,255,0.4)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/15 text-ink
+           hover:border-neon-cyan/60 hover:text-neon-cyan
+           backdrop-blur-md;
+  }
+
+  /* ===== Typography ===== */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[10px] font-mono font-normal uppercase tracking-[0.35em] text-ink-muted;
+  }
+
+  .eyebrow-dot::before {
+    content: '';
+    @apply block w-1 h-1 rounded-full bg-neon-cyan;
+    box-shadow: 0 0 12px rgba(111, 232, 255, 0.9);
+  }
+
+  /* ===== Glass ===== */
+  .glass {
+    @apply bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06];
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 60px rgba(111, 232, 255, 0.35);
+  }
+
+  .text-glow-soft {
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.15);
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  }
+}
+
+/* ===== Professional surfaces ===== */
+.surface-1 { background-color: #0B0D12; }
+.surface-2 { background-color: #101319; }
+.surface-3 { background-color: #16191F; }
+.border-hairline { border-color: rgba(255,255,255,0.06); }
+.border-soft { border-color: rgba(255,255,255,0.10); }
+.border-strong { border-color: rgba(255,255,255,0.18); }

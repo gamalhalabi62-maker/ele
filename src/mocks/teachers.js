@@ -1,0 +1,8 @@
+export const teachers = [
+  { id: 1, name: 'Douglas Lyphe',    role: 'Art Teacher',       specialty: 'Visual Design',   image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800', courses: 12, students: 3200 },
+  { id: 2, name: 'Nathaneal Down',   role: 'Music Teacher',     specialty: 'Audio Production', image: 'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=800', courses: 8,  students: 1850 },
+  { id: 3, name: 'Parsley Montana',  role: 'Math Teacher',      specialty: 'Statistics',      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=800', courses: 15, students: 4200 },
+  { id: 4, name: 'Amira Saleh',      role: 'Cloud Architect',   specialty: 'AWS / Azure',     image: 'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=800', courses: 10, students: 2900 },
+  { id: 5, name: 'Yusuf Ibrahim',    role: 'Security Expert',   specialty: 'Penetration Test',image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=800', courses: 7,  students: 1650 },
+  { id: 6, name: 'Hana Farouk',      role: 'Data Scientist',    specialty: 'Python / ML',     image: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=800', courses: 14, students: 3800 },
+];

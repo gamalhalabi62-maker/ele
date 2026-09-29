@@ -1,0 +1,8 @@
+export const blogs = [
+  { id: 1, image: 'https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=800', date: 'March 24, 2025', category: 'Corporate',   author: 'Brian Cumin',  title: 'LMS for Corporate Training: Optimizing Employee Learning and Development.' },
+  { id: 2, image: 'https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=800', date: 'March 18, 2025', category: 'Career',      author: 'Sara Nakamura', title: 'How to Break Into Cybersecurity Without a Computer Science Degree.' },
+  { id: 3, image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800', date: 'March 12, 2025', category: 'Development', author: 'Omar El-Sayed', title: 'React 19 — What Changed and Why It Matters for Your Projects.' },
+  { id: 4, image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800', date: 'March 05, 2025', category: 'AI/ML',       author: 'Dr. Fatima',    title: 'Building Your First Machine Learning Model in Under 30 Minutes.' },
+  { id: 5, image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800',   date: 'February 28, 2025', category: 'Data',     author: 'Mona A.',       title: 'The 5 SQL Queries Every Data Analyst Must Master.' },
+  { id: 6, image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800', date: 'February 20, 2025', category: 'DevOps',   author: 'Ahmed Khalil',  title: 'Docker vs Kubernetes: When Should You Use Each?' },
+];
