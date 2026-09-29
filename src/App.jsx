@@ -15,13 +15,32 @@ function App() {
 
   useLenis();
 
+  // ⚠️ Safety: لو اللودر علّق لأي سبب، الصفحة تتفتح بعد 8 ثواني
   useEffect(() => {
-    if (showIntro) {
+    if (!showIntro) return;
+    const safety = setTimeout(() => {
+      console.warn('[App] Loader timeout — unlocking page');
+      sessionStorage.setItem('itgate_intro_seen', 'true');
+      setShowIntro(false);
+    }, 8000);
+    return () => clearTimeout(safety);
+  }, [showIntro]);
+
+  // ⚠️ قفل الـ scroll بس على الديسكتوب + بس وقت اللودر
+  useEffect(() => {
+    const isTouch =
+      typeof window !== 'undefined' &&
+      (window.matchMedia('(pointer: coarse)').matches ||
+        window.innerWidth < 1024);
+
+    if (showIntro && !isTouch) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
+
     return () => {
+      // ⚠️ دايماً رجّع الـ body لحالته عند unmount
       document.body.style.overflow = '';
     };
   }, [showIntro]);
@@ -29,13 +48,23 @@ function App() {
   const handleIntroComplete = () => {
     sessionStorage.setItem('itgate_intro_seen', 'true');
     setShowIntro(false);
+    // ⚠️ تأكد إن الـ body مفتوح
+    document.body.style.overflow = '';
   };
 
   return (
     <BrowserRouter>
       {showIntro && <HackingLoader onComplete={handleIntroComplete} />}
 
-      <main className="bg-void min-h-screen">
+      <main
+        className="bg-void min-h-screen"
+        style={{
+          // ⚠️ المحتوى الأساسي مخفي بس ما يمنعش scroll
+          opacity: showIntro ? 0 : 1,
+          pointerEvents: showIntro ? 'none' : 'auto',
+          transition: 'opacity 600ms ease-out',
+        }}
+      >
         <Routes>
           <Route
             path="/"

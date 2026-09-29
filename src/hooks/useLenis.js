@@ -2,61 +2,96 @@ import { useEffect } from 'react';
 
 const useLenis = () => {
   useEffect(() => {
-    let lenis, rafId;
-    let tickerFn;
+    // ⚠️ ما نشغلش Lenis على الموبايل / touch devices
+    const isTouch =
+      typeof window !== 'undefined' &&
+      (window.matchMedia('(pointer: coarse)').matches ||
+        window.innerWidth < 1024);
+
+    if (isTouch) {
+      // تأكد إن الـ body مش مقفول من مكان قديم
+      document.body.style.overflow = '';
+      return;
+    }
+
+    let lenis = null;
+    let rafId = null;
+    let tickerFn = null;
+    let mounted = true;
 
     const init = async () => {
-      const Lenis = (await import('lenis')).default;
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
+      try {
+        const LenisModule = await import('lenis');
+        const Lenis = LenisModule.default;
 
-      lenis = new Lenis({
-        duration: 1.4,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-        wheelMultiplier: 1,
-        touchMultiplier: 1.4,
-        // ⚠️ مهم: يسمح للعناصر اللي عليها data-lenis-prevent
-        // إنها تعمل scroll طبيعي (زي الـ events snap container)
-        prevent: (node) => {
-          if (!node) return false;
-          if (typeof node.hasAttribute !== 'function') return false;
-          return node.hasAttribute('data-lenis-prevent');
-        },
-      });
+        const { gsap } = await import('gsap');
+        const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+        gsap.registerPlugin(ScrollTrigger);
 
-      // ⚠️ احفظ الـ instance عالميًا عشان نقدر نتحكم فيه
-      window.__lenis = lenis;
+        if (!mounted) return;
 
-      // Sync ScrollTrigger
-      lenis.on('scroll', ScrollTrigger.update);
+        lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+          wheelMultiplier: 1,
+          // ⚠️ شيلنا touchMultiplier — مش محتاجينه على الديسكتوب
+          prevent: (node) => {
+            if (!node) return false;
+            if (typeof node.hasAttribute !== 'function') return false;
+            return node.hasAttribute('data-lenis-prevent');
+          },
+        });
 
-      // RAF loop
-      const raf = (time) => {
-        lenis.raf(time);
+        // احفظ الـ instance عالميًا
+        window.__lenis = lenis;
+
+        // Sync مع ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+
+        // RAF loop
+        const raf = (time) => {
+          if (!mounted) return;
+          lenis.raf(time);
+          rafId = requestAnimationFrame(raf);
+        };
         rafId = requestAnimationFrame(raf);
-      };
-      rafId = requestAnimationFrame(raf);
 
-      // GSAP ticker sync
-      tickerFn = (time) => lenis.raf(time * 1000);
-      gsap.ticker.add(tickerFn);
-      gsap.ticker.lagSmoothing(0);
+        // Sync مع GSAP
+        tickerFn = (time) => lenis.raf(time * 1000);
+        gsap.ticker.add(tickerFn);
+        gsap.ticker.lagSmoothing(0);
+      } catch (err) {
+        console.warn('[Lenis] Failed to initialize:', err);
+      }
     };
 
     init();
 
     return () => {
+      mounted = false;
+
       if (rafId) cancelAnimationFrame(rafId);
+
       if (tickerFn) {
-        // نظّف الـ gsap ticker
-        import('gsap').then(({ gsap }) => {
-          gsap.ticker.remove(tickerFn);
-        }).catch(() => {});
+        import('gsap')
+          .then(({ gsap }) => {
+            gsap.ticker.remove(tickerFn);
+          })
+          .catch(() => {});
       }
+
+      // ⚠️ تأكد إن الـ body مفتوح دايماً
+      document.body.style.overflow = '';
+
       window.__lenis = null;
-      lenis?.destroy();
+      if (lenis) {
+        try {
+          lenis.destroy();
+        } catch (_) {
+          // ignore
+        }
+      }
     };
   }, []);
 };
