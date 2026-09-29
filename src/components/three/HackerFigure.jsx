@@ -16,7 +16,6 @@ export default function HackerFigure({
   const leftArm = useRef();
   const rightArm = useRef();
 
-  // Position + scale based on scroll (visible from start)
   const z = THREE.MathUtils.lerp(-7, 2, scrollProgress);
   const y = THREE.MathUtils.lerp(-1.4, -1.0, scrollProgress);
   const scale = THREE.MathUtils.lerp(0.9, 1.6, scrollProgress);

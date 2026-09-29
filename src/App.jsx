@@ -8,7 +8,6 @@ import HackingLoader from './components/intro/HackingLoader';
 import useLenis from './hooks/useLenis';
 
 function App() {
-  // نشوف هل المستخدم شاف الـ intro قبل كده
   const [showIntro, setShowIntro] = useState(() => {
     if (typeof window === 'undefined') return true;
     return !sessionStorage.getItem('itgate_intro_seen');
@@ -16,7 +15,6 @@ function App() {
 
   useLenis();
 
-  // ⚠️ اقفل scroll الصفحة وانت في الـ intro
   useEffect(() => {
     if (showIntro) {
       document.body.style.overflow = 'hidden';
@@ -35,7 +33,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* Hacking Loader — أول ما المستخدم يفتح الموقع */}
       {showIntro && <HackingLoader onComplete={handleIntroComplete} />}
 
       <main className="bg-void min-h-screen">
