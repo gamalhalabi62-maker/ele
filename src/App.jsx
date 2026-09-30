@@ -71,7 +71,7 @@ function App() {
             element={
               <>
                 <Hero />
-                <AboutStorySection />
+                {/* <AboutStorySection /> */}
                 <NetflixCoursesSection />
               </>
             }

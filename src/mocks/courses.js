@@ -31,7 +31,7 @@ export const COURSES = [
     oldPrice: 18000,
     currency: 'EGP',
     instructor: { name: 'Ahmed Khalil', avatar: 'https://i.pravatar.cc/150?img=12' },
-    image: '/courses/01-ccna-cyber-ops.jpg',      // ← غيرها لصورتك
+    image: '/courses/02-pentest.jpg',      // ← غيرها لصورتك
   },
   {
     id: 2,
@@ -100,7 +100,7 @@ export const COURSES = [
     oldPrice: 16500,
     currency: 'EGP',
     instructor: { name: 'Ahmed Khalil', avatar: 'https://i.pravatar.cc/150?img=12' },
-    image: '/courses/04-ccna-200-301.jpg',
+    image: '/courses/04-ccna-200-3001.jpg',
   },
   {
     id: 5,
@@ -168,7 +168,7 @@ export const COURSES = [
     oldPrice: 21000,
     currency: 'EGP',
     instructor: { name: 'Mona Abdel-Rahman', avatar: 'https://i.pravatar.cc/150?img=25' },
-    image: '/courses/07-aws-sa.jpg',
+    image: '/courses/06-network-plus.jpg',
   },
   {
     id: 8,
@@ -190,7 +190,7 @@ export const COURSES = [
     oldPrice: 18500,
     currency: 'EGP',
     instructor: { name: 'Hana Farouk', avatar: 'https://i.pravatar.cc/150?img=47' },
-    image: '/courses/08-azure-az104.jpg',
+    image: '/courses/02-pentest.jpg',
   },
   {
     id: 9,
@@ -211,7 +211,7 @@ export const COURSES = [
     oldPrice: 22500,
     currency: 'EGP',
     instructor: { name: 'Yusuf Ibrahim', avatar: 'https://i.pravatar.cc/150?img=68' },
-    image: '/courses/09-docker-k8s.jpg',
+    image: '/courses/02-pentest.jpg',
   },
 
   // ============ AI & DATA ============
@@ -235,7 +235,7 @@ export const COURSES = [
     oldPrice: 28000,
     currency: 'EGP',
     instructor: { name: 'Dr. Fatima Rahman', avatar: 'https://i.pravatar.cc/150?img=44' },
-    image: '/courses/10-ml-engineering.jpg',
+    image: '/courses/06-network-plus.jpg',
   },
   {
     id: 11,
@@ -256,7 +256,7 @@ export const COURSES = [
     oldPrice: 19500,
     currency: 'EGP',
     instructor: { name: 'Mona Abdel-Rahman', avatar: 'https://i.pravatar.cc/150?img=25' },
-    image: '/courses/11-data-analytics.jpg',
+    image: '/courses/03-soc-analyst.jpg',
   },
 
   // ============ DESIGN ============
@@ -279,7 +279,7 @@ export const COURSES = [
     oldPrice: 14500,
     currency: 'EGP',
     instructor: { name: 'Layla Haddad', avatar: 'https://i.pravatar.cc/150?img=49' },
-    image: '/courses/12-graphic-design.jpg',
+    image: '/courses/06-network-plus.jpg',
   },
   {
     id: 13,
@@ -300,7 +300,7 @@ export const COURSES = [
     oldPrice: 18500,
     currency: 'EGP',
     instructor: { name: 'Sara Mansour', avatar: 'https://i.pravatar.cc/150?img=45' },
-    image: '/courses/13-uiux.jpg',
+    image: '/courses/03-soc-analyst.jpg',
   },
 
   // ============ SOFTWARE TESTING ============
@@ -323,7 +323,7 @@ export const COURSES = [
     oldPrice: 12500,
     currency: 'EGP',
     instructor: { name: 'Omar El-Sayed', avatar: 'https://i.pravatar.cc/150?img=33' },
-    image: '/courses/14-istqb.jpg',
+    image: '/courses/06-network-plus.jpg',
   },
   {
     id: 15,
@@ -345,7 +345,7 @@ export const COURSES = [
     oldPrice: 18500,
     currency: 'EGP',
     instructor: { name: 'Hana Farouk', avatar: 'https://i.pravatar.cc/150?img=47' },
-    image: '/courses/15-selenium.jpg',
+    image: '/courses/106-network-plus.jpg',
   },
 
   // ============ ML-OPS ============
@@ -369,7 +369,7 @@ export const COURSES = [
     oldPrice: 25000,
     currency: 'EGP',
     instructor: { name: 'Dr. Fatima Rahman', avatar: 'https://i.pravatar.cc/150?img=44' },
-    image: '/courses/16-mlops.jpg',
+    image: '/courses/06-network-plus.jpg',
   },
 
   // ============ QA ============
@@ -392,7 +392,7 @@ export const COURSES = [
     oldPrice: 16500,
     currency: 'EGP',
     instructor: { name: 'Ahmed Khalil', avatar: 'https://i.pravatar.cc/150?img=12' },
-    image: '/courses/17-qa-pro.jpg',
+    image: '/courses/03-soc-analyst.jpg',
   },
 
   // ============ CCNA CYBER-OPS ============
