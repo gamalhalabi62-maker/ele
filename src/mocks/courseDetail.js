@@ -33,7 +33,7 @@ export const COURSE_DETAIL = {
     name: 'Ahmed Khalil',
     headline: 'Senior Security Engineer · 15+ Years',
     bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor, arcu et pretium tempor, neque leo finibus eros, nec faucibus justo purus sit amet ligula. Sed at consequat arcu. Nam ut nulla ac mauris efficitur venenatis.',
-    avatar: 'https://i.pravatar.cc/300?img=12',
+    avatar: '/courses/j.jpg',
     rating: 4.9,
     courses: 12,
     students: 45280,
