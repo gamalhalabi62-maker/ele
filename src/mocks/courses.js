@@ -30,7 +30,7 @@ export const COURSES = [
     price: 12500,
     oldPrice: 18000,
     currency: 'EGP',
-    instructor: { name: 'Ahmed Khalil', avatar: 'https://i.pravatar.cc/150?img=12' },
+    instructor: { name: 'Ahmed Khalil', avatar: '/courses/j.jpg' },
     image: '/courses/03-soc-analyst.jpg',      // ← غيرها لصورتك
   },
   {
@@ -99,7 +99,7 @@ export const COURSES = [
     price: 11000,
     oldPrice: 16500,
     currency: 'EGP',
-    instructor: { name: 'Ahmed Khalil', avatar: 'https://i.pravatar.cc/150?img=12' },
+    instructor: { name: 'Ahmed Khalil', avatar: '/courses/j.jpg' },
     image: '/courses/04-ccna-200-3001.jpg',
   },
   {
@@ -391,7 +391,7 @@ export const COURSES = [
     price: 11500,
     oldPrice: 16500,
     currency: 'EGP',
-    instructor: { name: 'Ahmed Khalil', avatar: 'https://i.pravatar.cc/150?img=12' },
+    instructor: { name: 'Ahmed Khalil', avatar: '/courses/j.jpg' },
     image: '/courses/03-soc-analyst.jpg',
   },
 
