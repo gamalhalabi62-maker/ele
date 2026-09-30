@@ -31,7 +31,7 @@ export const COURSES = [
     oldPrice: 18000,
     currency: 'EGP',
     instructor: { name: 'Ahmed Khalil', avatar: 'https://i.pravatar.cc/150?img=12' },
-    image: '/courses/02-pentest.jpg',      // ← غيرها لصورتك
+    image: '/courses/03-soc-analyst.jpg',      // ← غيرها لصورتك
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ export const COURSES = [
     oldPrice: 22000,
     currency: 'EGP',
     instructor: { name: 'Sara Mansour', avatar: 'https://i.pravatar.cc/150?img=45' },
-    image: '/courses/02-pentest.jpg',
+    image: '/courses/03-soc-analyst.jpg',
   },
   {
     id: 3,
