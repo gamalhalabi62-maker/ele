@@ -4,34 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HeroVideoBackground from './HeroVideoBackground';
 import { ArrowDown, Terminal, ShieldCheck, Zap } from 'lucide-react';
 
-// ============================================
-// HERO VIDEOS
-// ============================================
 const HERO_VIDEOS = [
   {
     id: 1,
-    src: '/videos/01-cyber-ops.mp4',
+    src: '/videos/it.MOV',
     eyebrow: '01 · CYBER OPERATIONS',
-    headline: 'Command the digital battlefield.',
+    headline: 'Your Gate To The World',
     sub: 'Where strategy meets execution — full-spectrum cyber operations.',
     accent: 'cyan',
   },
-  {
-    id: 2,
-    src: '/videos/02-red-team.mp4',
-    eyebrow: '02 · RED TEAM',
-    headline: 'Break the system.',
-    sub: 'Recon. Exploit. Escalate. Own. Offensive security as an art form.',
-    accent: 'red',
-  },
-  {
-    id: 3,
-    src: '/videos/03-blue-team.mp4',
-    eyebrow: '03 · BLUE TEAM',
-    headline: 'Guard the perimeter.',
-    sub: 'Detect. Isolate. Respond. Harden. The defense never sleeps.',
-    accent: 'cyan',
-  },
+
 ];
 
 const ACCENT_COLORS = {
