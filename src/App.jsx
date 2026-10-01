@@ -5,6 +5,7 @@ import AboutStorySection from './components/about/AboutStorySection';
 import NetflixCoursesSection from './components/courses/NetflixCoursesSection';
 import CourseDetail from './pages/CourseDetail';
 import HackingLoader from './components/intro/HackingLoader';
+import ScrollToTop from './components/ScrollToTop';
 import useLenis from './hooks/useLenis';
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
 
   return (
     <BrowserRouter>
+      {/* ✅ إعادة التمرير للأعلى عند كل تغيير في المسار */}
+      <ScrollToTop />
+
       {showIntro && <HackingLoader onComplete={handleIntroComplete} />}
 
       <main

@@ -7,10 +7,14 @@ export const COURSE_DETAIL = {
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
 
-  // Hero
-  heroVideo: 'https://cdn.coverr.co/videos/coverr-typing-on-a-laptop-4062/1080p.mp4',
-  heroPoster: 'https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1600',
-
+instructorVideo: {
+  src: '/videos/it.MOV',
+  poster: '/courses/03-soc-analyst.jpg',
+},
+previewVideo: {
+  src: '/videos/it.MOV',
+  poster: '/courses/03-soc-analyst.jpg',
+},
   // Meta
   rating: 4.9,
   reviews: 2547,
