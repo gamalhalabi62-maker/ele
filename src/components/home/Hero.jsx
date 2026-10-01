@@ -97,7 +97,7 @@ const Hero = () => {
       {/* ═══════════════════════════════════════════
           MARQUEE — "IT GATE" خلف النص
       ═══════════════════════════════════════════ */}
-      <div
+      {/* <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none z-[2] overflow-hidden"
         style={{ opacity: textOpacity * 0.06 }}
       >
@@ -116,7 +116,7 @@ const Hero = () => {
             </span>
           ))}
         </motion.div>
-      </div>
+      </div> */}
 
       {/* ═══════════════════════════════════════════
           GRID PATTERN
