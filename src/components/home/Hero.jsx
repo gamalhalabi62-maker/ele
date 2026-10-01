@@ -8,9 +8,9 @@ const HERO_VIDEOS = [
   {
     id: 1,
     src: '/videos/it.MOV',
-    eyebrow: '01 · CYBER OPERATIONS',
+    eyebrow: 'IT Gate',
     headline: 'Your Gate To The World',
-    sub: 'Where strategy meets execution — full-spectrum cyber operations.',
+    sub: 'Authorized Traning Center , Cisco Certified Traning , Microsoft Certified Traning , Scholarships ,MCIT Accreditation ',
     accent: 'cyan',
   },
 
@@ -176,9 +176,9 @@ const Hero = () => {
               </span>
             </div>
             <div className="hidden sm:flex items-center gap-3 text-ink-faint">
-              <span>SECURE CHANNEL</span>
+              <span>YOUR GATE</span>
               <span className="h-px w-8 bg-ink-faint/40" />
-              <span>v.2025</span>
+              <span>v.2020</span>
             </div>
           </div>
         </div>
@@ -291,10 +291,10 @@ const Hero = () => {
         <div className="mt-10 md:mt-20 grid grid-cols-2 md:grid-cols-4
                         gap-x-6 md:gap-x-12 gap-y-5 md:gap-y-8 max-w-3xl">
           {[
-            { k: '10,000', v: 'OPERATORS' },
-            { k: '200',    v: 'MODULES' },
+            { k: '10,000', v: 'Student' },
+            { k: '200',    v: 'Course' },
             { k: '50',     v: 'MENTORS' },
-            { k: '99.9',   v: 'UPTIME %' },
+            { k: '99.9',   v: 'quality' },
           ].map((s) => (
             <div
               key={s.v}

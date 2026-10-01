@@ -89,7 +89,7 @@ const CourseCard = ({ course }) => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } // 50% من الكارد ظاهر → يعتبر visible
+      { threshold: 0.7 } // 50% من الكارد ظاهر → يعتبر visible
     );
 
     observer.observe(el);
