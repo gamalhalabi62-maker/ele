@@ -18,8 +18,7 @@ export const EVENTS = [
     media: [
       {
         type: 'video',
-        // Pexels video — مختبر وشغال
-        src: 'https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4',
+        src: '/videos/h.MOV',
         poster:
           'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1600',
       },
@@ -46,14 +45,11 @@ export const EVENTS = [
     media: [
       {
         type: 'video',
-        // Pexels — مصور بيلعب على الكمبيوتر (ينفع للسايبر)
-        src: 'https://videos.pexels.com/video-files/5377684/5377684-uhd_2560_1440_25fps.mp4',
-        poster:
-          'https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      },
+        src: '/videos/m.MOV',
+              },
     ],
     ctaText: 'Reserve Seat',
-    ctaLink: '/events/red-team-workshop',
+    ctaLink: '/events/n.MOV',
   },
   {
     id: 3,
@@ -74,8 +70,7 @@ export const EVENTS = [
     media: [
       {
         type: 'video',
-        // Pexels — Server room / data center
-        src: 'https://videos.pexels.com/video-files/3141210/3141210-uhd_2560_1440_25fps.mp4',
+        src: '/videos/h.MOV',
         poster:
           'https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1600',
       },
@@ -102,8 +97,7 @@ export const EVENTS = [
     media: [
       {
         type: 'video',
-        // Pexels — abstract tech
-        src: 'https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4',
+        src: '/videos/m.MOV',
         poster:
           'https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=1600',
       },
@@ -130,8 +124,7 @@ export const EVENTS = [
     media: [
       {
         type: 'video',
-        // Pexels — tech / neon
-        src: 'https://videos.pexels.com/video-files/5377684/5377684-uhd_2560_1440_25fps.mp4',
+        src: '/videos/n.MOV',
         poster:
           'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1600',
       },
@@ -158,8 +151,7 @@ export const EVENTS = [
     media: [
       {
         type: 'video',
-        // Pexels — coding / hacker
-        src: 'https://videos.pexels.com/video-files/3141210/3141210-uhd_2560_1440_25fps.mp4',
+        src: '/videos/h.MOV',
         poster:
           'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1600',
       },
